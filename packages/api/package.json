@@ -36,7 +36,7 @@
     "@middy/http-event-normalizer": "^1.0.0",
     "@middy/http-json-body-parser": "^1.0.0",
     "@middy/validator": "^1.0.0",
-    "adm-zip": "^0.4.16",
+    "@mvp/common": "*",
     "aws-amplify": "^3.0.20",
     "aws-lambda": "^1.0.6",
     "http-errors": "^1.8.0",
