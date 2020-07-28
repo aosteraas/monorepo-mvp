@@ -1,5 +1,6 @@
 const path = require('path');
 const slsw = require('serverless-webpack');
+const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const isLocal = slsw.lib.webpack.isLocal;
 
 module.exports = {
@@ -9,6 +10,7 @@ module.exports = {
   target: 'node',
   resolve: {
     extensions: ['.mjs', '.ts', '.js'],
+    plugins: [new TsconfigPathsPlugin()],
   },
   output: {
     libraryTarget: 'commonjs2',
