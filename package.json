@@ -1,10 +1,13 @@
 {
   "name": "monorepo-mvp",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "web": "yarn workspace @donkeygate/client run start",
-    "deploy:api": "yarn workspace @mvp/api serverless deploy"
+    "deploy:api": "yarn workspace @mvp/api serverless deploy",
+    "test:all": "yarn workspaces run test"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.7.0",
@@ -18,7 +21,10 @@
     "typescript": "~3.9.6"
   },
   "lint-staged": {
-    "*.{js,css,md}": ["prettier --write", "git add"]
+    "*.{js,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
